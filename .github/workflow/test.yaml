@@ -13,7 +13,7 @@ jobs:
         run: yarn install
 
       - name: Jesting your code
-        run: yarn test
+        run: yarn test --coverage
       - run: echo "👀 Jest finished! Have you pass all test?"
 
       - run: echo "👶 This job has finished with status - ${{ job.status }}."
