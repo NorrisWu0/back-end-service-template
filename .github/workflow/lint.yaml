@@ -1,0 +1,19 @@
+name: Lint your with eslint
+
+on: [pull_request]
+
+jobs:
+  Lint-Your-Code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Lint with AirBnb rule
+        run: yarn lint
+      - run: echo "👀 Lint finished!"
+
+      - run: echo "🍏 This job has finished with status - ${{ job.status }}."

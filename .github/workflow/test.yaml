@@ -1,0 +1,19 @@
+name: Jest your code
+
+on: [pull_request]
+
+jobs:
+  Jesting-Code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Jesting your code
+        run: yarn test
+      - run: echo "👀 Jest finished! Have you pass all test?"
+
+      - run: echo "👶 This job has finished with status - ${{ job.status }}."
