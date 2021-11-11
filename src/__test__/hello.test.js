@@ -1,10 +1,7 @@
 const request = require('supertest');
-const logger = require('../utils/logger');
 const app = require('../app');
 
-logger.info('Starting Test');
-
-describe('This app', () => {
+describe('Hello API', () => {
   it('should return hello world with 200', async () => {
     const { status, body } = await request(app).get('/api/v1/hello');
 
