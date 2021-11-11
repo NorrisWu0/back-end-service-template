@@ -8,6 +8,7 @@ const helloWorld = (req, res) => {
   logger.info('hello world');
   return res.status(200).json('hello world!');
 };
+router.get('/hello', helloWorld);
 
 const greeting = (req, res) => {
   const { name } = req.body;
@@ -18,8 +19,12 @@ const greeting = (req, res) => {
   }
   return res.status(200).json(`hello ${name}!`);
 };
-
-router.get('/hello', helloWorld);
 router.post('/greet', greeting);
+
+const throwError = () => {
+  throw new Error('This is an expected exception');
+};
+
+router.get('/error', throwError);
 
 module.exports = router;
