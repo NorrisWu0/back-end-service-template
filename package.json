@@ -5,12 +5,16 @@
   "author": "Norris Wu <42906455+NorrisWu0@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "test": "jest test --detectOpenHandles --watch",
+    "lint": "eslint ."
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6",
     "winston": "^3.3.3"
   },
   "devDependencies": {
