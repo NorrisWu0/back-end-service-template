@@ -1,0 +1,10 @@
+{
+  "name": "post-api",
+  "version": "1.0.0",
+  "repository": "https://github.com/Great-Phermesia/post-api.git",
+  "author": "Norris Wu <42906455+NorrisWu0@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./src/index.js"
+  }
+}
