@@ -3,9 +3,10 @@ const app = require('../app');
 
 describe('Error API', () => {
   it('should throw an expected exception', async () => {
-    const { status } = await request(app).get('/api/v1/error');
+    const { status, body } = await request(app).get('/api/v1/error');
 
     expect(status).toEqual(500);
+    expect(body).toBe('Server has encountered an unexpected error');
   });
 
   it('should return "This API you requesting does not exist" with 404', async () => {
