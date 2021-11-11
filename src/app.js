@@ -13,6 +13,7 @@ app.use(
 );
 app.use(helmet());
 
+app.use(express.json());
 app.use('/api/v1', router);
 
 module.exports = app;
