@@ -27,4 +27,9 @@ const throwError = () => {
 
 router.get('/error', throwError);
 
+// 404 Route
+router.all('*', (req, res) =>
+  res.status(404).json('This API you requesting does not exist')
+);
+
 module.exports = router;
